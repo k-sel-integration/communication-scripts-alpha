@@ -8,6 +8,12 @@ cd .kselsupp
 prevout=`cat urlstor 2>/dev/null`
 if [ "$?" = "0" ] ; then 
  echo "current file:"$prevout
+   if [ -f $prevout ]
+   then
+      echo "(exists)"
+   else
+     echo  "(not exists)"
+   fi
 else
  echo "current file not avaliable"
 fi 
